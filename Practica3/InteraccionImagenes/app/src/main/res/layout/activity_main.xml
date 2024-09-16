@@ -19,7 +19,7 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siguiente"
+        android:text="@string/nextButtonNext"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/imageSpinner"
         app:layout_constraintStart_toStartOf="parent"
