@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Save the spinner state when the activity is being recreated
+    // guardando el estado del spinner
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt("spinner_position", imageSpinner.selectedItemPosition)

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">InteraccionImagenes</string>
     <string name="nextButtonNext">Siguiente</string>
+    <string name="backButtonBack">Volver</string>
 </resources>
