@@ -17,21 +17,22 @@ class ImageActivity : AppCompatActivity() {
         imageView = findViewById(R.id.imageView)
         backButton = findViewById(R.id.backButton)
 
-        // posición seleccionada
+        // Obtener la posición seleccionada del Intent
         val selectedPosition = intent.getIntExtra("spinner_position", 0)
 
-        //  when para seleccionar la imagen
+        // Usar el bloque when para seleccionar la imagen
         val imageResource = when (selectedPosition) {
-            0 -> R.drawable.image1
-            1 -> R.drawable.image2
-            2 -> R.drawable.image3
-            else -> R.drawable.image1
+            0 -> R.drawable.image1 // Asegúrate de tener image1.png en res/drawable
+            1 -> R.drawable.image2 // Asegúrate de tener image2.png en res/drawable
+            2 -> R.drawable.image3 // Asegúrate de tener image3.png en res/drawable
+            else -> R.drawable.image1 // Default case
         }
 
+        // Configurar la imagen en el ImageView
         imageView.setImageResource(imageResource)
 
         backButton.setOnClickListener {
-            // volver a la actividad anterior
+            // Volver a la actividad anterior
             finish()
         }
     }

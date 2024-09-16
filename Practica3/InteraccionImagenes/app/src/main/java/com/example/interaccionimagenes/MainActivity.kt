@@ -1,4 +1,4 @@
-// Interaccion con imagenes y spinners
+// Interacción con imágenes y spinners
 // Evelyn Milagros Chipana Ramos
 // Creación: 15-09-2024
 // Finalización: 15-09-2024
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imageSpinner: Spinner
     private lateinit var nextButton: Button
 
-    // recursos en drawable
+    // Recursos en drawable
     private val imageNames = listOf("Image 1", "Image 2", "Image 3")
     private val imageResources = listOf(R.drawable.image1, R.drawable.image2, R.drawable.image3)
 
@@ -28,31 +28,30 @@ class MainActivity : AppCompatActivity() {
         imageSpinner = findViewById(R.id.imageSpinner)
         nextButton = findViewById(R.id.nextButton)
 
-        // spinner
+        // Configurar el spinner
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, imageNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         imageSpinner.adapter = adapter
 
-        // restaurar spinner
+        // Restaurar spinner
         savedInstanceState?.let {
             val spinnerPosition = it.getInt("spinner_position")
             imageSpinner.setSelection(spinnerPosition)
         }
 
         nextButton.setOnClickListener {
-            // obtener la imagen
+            // Obtener la posición seleccionada
             val selectedIndex = imageSpinner.selectedItemPosition
 
-            // comenzar la segunda actividad
+            // Comenzar la segunda actividad
             val intent = Intent(this, ImageActivity::class.java).apply {
-                putExtra("selected_image", imageResources[selectedIndex])
                 putExtra("spinner_position", selectedIndex)
             }
             startActivity(intent)
         }
     }
 
-    // guardando el estado del spinner
+    // Guardar el estado del spinner
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt("spinner_position", imageSpinner.selectedItemPosition)
