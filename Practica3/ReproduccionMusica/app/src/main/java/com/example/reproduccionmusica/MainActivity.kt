@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val spinner: Spinner = findViewById(R.id.spinner_audios)
         val btnSelect: Button = findViewById(R.id.btn_select)
         //audios
-        val audios = arrayOf("Audio 1", "Audio 2", "Audio 3", "Audio 4", "Audio 5")
+        val audios = arrayOf("...Ready for it?", "End Game", "I Did Something Bad", "Don't Blame Me", "Delicate")
 
         // adaptador para el Spinner
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, audios)

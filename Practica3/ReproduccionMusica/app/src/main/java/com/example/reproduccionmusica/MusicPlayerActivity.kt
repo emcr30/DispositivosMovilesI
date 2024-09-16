@@ -32,11 +32,11 @@ class MusicPlayerActivity : AppCompatActivity() {
 
         // Selecciona el archivo de audio basado en el nombre
         val audioResId = when (audioName) {
-            "Audio 1" -> R.raw.audio1
-            "Audio 2" -> R.raw.audio2
-            "Audio 3" -> R.raw.audio3
-            "Audio 4" -> R.raw.audio4
-            "Audio 5" -> R.raw.audio5
+            "...Ready for it?" -> R.raw.audio1
+            "End Game" -> R.raw.audio2
+            "I Did Something Bad" -> R.raw.audio3
+            "Don't Blame Me" -> R.raw.audio4
+            "Delicate" -> R.raw.audio5
             else -> R.raw.audio1
         }
 
@@ -69,7 +69,7 @@ class MusicPlayerActivity : AppCompatActivity() {
         val backButton: Button = findViewById(R.id.btn_back)
 
         backButton.setOnClickListener {
-            finish() // Cierra la actividad actual y regresa a MainActivity
+            finish() // botón volver
         }
 
     }
@@ -79,6 +79,6 @@ class MusicPlayerActivity : AppCompatActivity() {
         if (mediaPlayer.isPlaying) {
             mediaPlayer.stop()
         }
-        mediaPlayer.release()  // Libera recursos
+        mediaPlayer.release()  // libera recursos
     }
 }
