@@ -3,6 +3,7 @@
 // Creación: 15-09-2024
 // Finalización: 16-09-2024
 
+package com.example.reproduccionmusica;
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
+import com.example.reproduccionmusica.R
 
 class MainActivity : AppCompatActivity() {
 

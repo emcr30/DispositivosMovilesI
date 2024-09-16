@@ -1,9 +1,12 @@
+package com.example.reproduccionmusica;
+
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.reproduccionmusica.R
 
 class MusicPlayerActivity : AppCompatActivity() {
 
@@ -21,11 +24,11 @@ class MusicPlayerActivity : AppCompatActivity() {
         val btnPause: Button = findViewById(R.id.btn_pause)
         val btnStop: Button = findViewById(R.id.btn_stop)
 
-        // Muestra el nombre del audio
+        // muestra el nombre del audio
         tvAudioName.text = audioName
 
-        // Carga una imagen asociada (por ejemplo, puedes poner una imagen por defecto)
-        ivAudioImage.setImageResource(R.drawable.default_audio_image)
+        // carga una imagen asociada (por ejemplo, puedes poner una imagen por defecto)
+        ivAudioImage.setImageResource(R.drawable.image1)
 
         // Selecciona el archivo de audio basado en el nombre
         val audioResId = when (audioName) {
@@ -37,10 +40,10 @@ class MusicPlayerActivity : AppCompatActivity() {
             else -> R.raw.audio1
         }
 
-        // Inicializa el MediaPlayer con el audio seleccionado
+        // inicializa el MediaPlayer con el audio seleccionado
         mediaPlayer = MediaPlayer.create(this, audioResId)
 
-        // Lógica para los botones de reproducción
+        // lógica para los botones de reproducción
         btnPlay.setOnClickListener {
             if (!isPlaying) {
                 mediaPlayer.start()
@@ -59,7 +62,7 @@ class MusicPlayerActivity : AppCompatActivity() {
             if (isPlaying) {
                 mediaPlayer.stop()
                 isPlaying = false
-                mediaPlayer = MediaPlayer.create(this, audioResId)  // Para reiniciar el MediaPlayer
+                mediaPlayer = MediaPlayer.create(this, audioResId)  // para reiniciar el MediaPlayer
             }
         }
     }
