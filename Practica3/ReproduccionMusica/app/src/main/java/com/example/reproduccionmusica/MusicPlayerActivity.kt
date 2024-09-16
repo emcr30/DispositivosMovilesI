@@ -65,6 +65,13 @@ class MusicPlayerActivity : AppCompatActivity() {
                 mediaPlayer = MediaPlayer.create(this, audioResId)  // para reiniciar el MediaPlayer
             }
         }
+        // botón volver
+        val backButton: Button = findViewById(R.id.btn_back)
+
+        backButton.setOnClickListener {
+            finish() // Cierra la actividad actual y regresa a MainActivity
+        }
+
     }
 
     override fun onDestroy() {
