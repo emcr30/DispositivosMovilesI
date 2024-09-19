@@ -14,6 +14,7 @@
         android:textSize="50sp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/font1"/>
+    
 
     <Spinner
         android:id="@+id/spinner_audios"
