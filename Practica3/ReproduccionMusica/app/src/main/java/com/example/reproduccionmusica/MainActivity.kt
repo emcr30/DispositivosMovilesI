@@ -1,7 +1,7 @@
-// Reproduccion de musica con imagenes y botones
+// Reproduccion de musica con imagenes y botones, en este caso veremos el album Reptutation de Taylor Swift
 // Evelyn Milagros Chipana Ramos
 // Creación: 15-09-2024
-// Finalización: 16-09-2024
+// Finalización: 19-09-2024
 
 package com.example.reproduccionmusica;
 
