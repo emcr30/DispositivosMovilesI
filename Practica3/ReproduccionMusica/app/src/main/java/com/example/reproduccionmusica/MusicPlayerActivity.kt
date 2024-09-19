@@ -22,7 +22,6 @@ class MusicPlayerActivity : AppCompatActivity() {
         val ivAudioImage: ImageView = findViewById(R.id.iv_audio_image)
         val btnPlay: Button = findViewById(R.id.btn_play)
         val btnPause: Button = findViewById(R.id.btn_pause)
-        val btnStop: Button = findViewById(R.id.btn_stop)
 
         // muestra el nombre del audio
         tvAudioName.text = audioName
@@ -58,13 +57,6 @@ class MusicPlayerActivity : AppCompatActivity() {
             }
         }
 
-        btnStop.setOnClickListener {
-            if (isPlaying) {
-                mediaPlayer.stop()
-                isPlaying = false
-                mediaPlayer = MediaPlayer.create(this, audioResId)  // para reiniciar el MediaPlayer
-            }
-        }
         // botón volver
         val backButton: Button = findViewById(R.id.btn_back)
 
