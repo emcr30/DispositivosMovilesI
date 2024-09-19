@@ -5,5 +5,6 @@
     <string name="pause_button">Pausar</string>
     <string name="stop_button">Detener</string>
     <string name="back_button">Volver</string>
+    <string name="name_of_song">Nombre de la cancion</string>
 
 </resources>

@@ -16,7 +16,7 @@
         android:id="@+id/tv_audio_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre de la canción"
+        android:text="@string/name_of_song"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
